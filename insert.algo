@@ -1,0 +1,21 @@
+ALGORITHM InsertionSort
+VAR
+    currentValue: INTEGER
+    i, j: INTEGER    //Declaration of variables
+    arr: INTEGER
+BEGIN
+    function sortMe(arr) {
+    arr:= [8, 6, 9, 1, 4, 5, 3, 7, 2]
+    Read(arr)//read in array elements
+    for (let i = 1; i < arr.length; i++) { //initialization and comparing with array length
+    currentValue = arr[i]
+    for (j = i - 1; j >= 0 && arr[j] > currentValue; j--) { //second counter initialization
+    arr[j + 1] = arr[j]
+    }
+    arr[j + 1] = currentValue //sortted and the return value until all elememts are sorted
+    }
+    return arr
+    Write(sortMe([arr]))=>[1, 2, 3 , 4 , 5 , 6 . 7 . 8 .9]// that is the output.
+}
+
+END
